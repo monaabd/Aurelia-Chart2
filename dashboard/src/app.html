@@ -1,0 +1,29 @@
+<template>
+    <nav class="navbar navbar-invers">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="nav navbar-nav">
+              <li repeat.for="route of router.navigation"  class="${route.isActive ? 'active' :" "}">
+              
+                <!-- bala ma be li ye method midim ke az isActive method ke tarif shode estefade kon va age active e highligh beshe><-->
+                 <a class="nav-link" href.bind="route.href">${route.title}</a>
+              </li> 
+            </ul>
+          </div>
+      </div>
+    </div>
+   </nav>
+  <!--div>
+    inja age route nakarde bodi baraye inke module view haye view va overview ro neshon bedi to app az require estefade mikoni pain 
+    <require from="./modules/over-view/over-view"></require>
+    <over-view></over-view>
+  </div-->
+  <!--div>
+    <require from="./modules/view/view"></require>
+    <view></view>
+   </div-->
+  
+
+<router-view></router-view>
+</template>
